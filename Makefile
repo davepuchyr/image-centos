@@ -1,16 +1,16 @@
-NAME =			centos
+NAME =			fedora
 VERSION =		latest
-VERSION_ALIASES =	7.3.1611 7.3 7
-TITLE =			CentOS 7.3
-DESCRIPTION =		CentOS 7.3
-SOURCE_URL =		https://github.com/scaleway/image-centos
-VENDOR_URL =		https://www.centos.org/
+VERSION_ALIASES =	27
+TITLE =			Fedora 27
+DESCRIPTION =		Fedora 27
+SOURCE_URL =		https://github.com/davepuchyr/image-centos.git
+VENDOR_URL =		https://www.getfedora.com/
 DEFAULT_IMAGE_ARCH =	x86_64
 
 
 IMAGE_VOLUME_SIZE =	50G
-IMAGE_BOOTSCRIPT =	mainline 4.4
-IMAGE_NAME =		CentOS 7.3
+IMAGE_BOOTSCRIPT =	mainline 4.14.5 rev1
+IMAGE_NAME =		Fedora 27
 
 
 # This is specific to distribution images
