@@ -2,11 +2,10 @@ FROM fedora:27
 
 # Adding and calling builder-enter
 COPY ./overlay-image-tools/usr/local/sbin/scw-builder-enter /usr/local/sbin/
-RUN set -e; dnf -y update \
+
+RUN set -e; dnf update -y; \
         /bin/sh -e /usr/local/sbin/scw-builder-enter; \
-        dnf clean all; \
-      ;; \
-    esac
+        dnf clean all -y;
 
 # Patch rootfs
 COPY ./overlay-image-tools ./overlay /
