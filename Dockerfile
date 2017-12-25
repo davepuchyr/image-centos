@@ -4,7 +4,28 @@ FROM fedora:27
 COPY ./overlay-image-tools/usr/local/sbin/scw-builder-enter /usr/local/sbin/
 
 RUN set -e; dnf update -y dnf ; dnf update -y ; \
-        dnf install -y redhat-lsb-core cloud-init wget openssh-server openssh-clients rsync basesystem fedora-release fedora-repos bash curl elinks ; \
+        dnf install -y redhat-lsb-core cloud-init kmod openssh-server openssh-clients rsync elinks \
+      bash-completion \
+cronie \
+cronie-anacron \
+crontabs \
+      ethstatus \
+      haveged \
+      htop \
+      ioping \
+      iotop \
+      iperf \
+      mlocate \
+      ntp \
+      ntpdate \
+      rsync \
+      screen \
+      socat \
+      sudo \
+      tcpdump \
+      tmux \
+      wget \
+      vim-enhanced ; \
         /bin/sh -e /usr/local/sbin/scw-builder-enter; \
         dnf clean all -y;
 
