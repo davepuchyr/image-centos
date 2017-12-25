@@ -4,14 +4,12 @@ FROM fedora:27
 COPY ./overlay-image-tools/usr/local/sbin/scw-builder-enter /usr/local/sbin/
 
 RUN set -e; dnf update -y; \
+        dnf install -y redhat-lsb-core.x86_64; \
         /bin/sh -e /usr/local/sbin/scw-builder-enter; \
         dnf clean all -y;
 
 # Patch rootfs
 COPY ./overlay-image-tools ./overlay /
-
-# Remove root password
-RUN passwd -d root
 
 # Enable Scaleway services
 RUN systemctl enable \
