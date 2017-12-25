@@ -1,5 +1,5 @@
 NAME =			fedora
-VERSION =		latest
+VERSION =		dangerous
 VERSION_ALIASES =	27
 TITLE =			Fedora 27
 DESCRIPTION =		Fedora 27

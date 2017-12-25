@@ -12,3 +12,5 @@ rootfs*
 */*.built
 .docker-container*.built
 docker-rules.mk
+ssh*key*
+
