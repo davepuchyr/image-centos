@@ -3,7 +3,7 @@ VERSION =		dangerous
 VERSION_ALIASES =	27
 TITLE =			Fedora 27
 DESCRIPTION =		Fedora 27
-SOURCE_URL =		https://github.com/davepuchyr/image-centos.git
+SOURCE_URL =		https://github.com/davepuchyr/image-fedora.git
 VENDOR_URL =		https://www.getfedora.com/
 DEFAULT_IMAGE_ARCH =	x86_64
 
