@@ -4,7 +4,8 @@ FROM fedora:27
 COPY ./overlay-image-tools/usr/local/sbin/scw-builder-enter /usr/local/sbin/
 
 RUN set -e; dnf update -y; \
-        dnf install -y redhat-lsb-core.x86_64; \
+        dnf install -y redhat-lsb-core cloud-init wget ; \
+        dnf groupinstall -y "Fedora Server Edition" ; \
         /bin/sh -e /usr/local/sbin/scw-builder-enter; \
         dnf clean all -y;
 
