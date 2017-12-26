@@ -26,7 +26,7 @@ crontabs \
       tcpdump \
       tmux \
       wget \
-vim-enhanced ; \
+git vim-enhanced ; \
         /bin/sh -e /usr/local/sbin/scw-builder-enter; \
         dnf clean all -y;
 
