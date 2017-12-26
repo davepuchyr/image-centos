@@ -19,6 +19,7 @@ ssh-keygen
 
 # Get up-to-date tools
 ```
+apt-get update
 apt-get install golang
 go version
 export GOPATH=~/go
@@ -31,7 +32,7 @@ scw version # the new version
 scw --region=$SCW_REGION login
 ```
 
-# Build the image expecting it to fail near a final step
+# Build the image (it may fail near a final step)
 ```
 cd
 git clone https://github.com/davepuchyr/image-fedora27.git
@@ -39,10 +40,10 @@ cd ~/image-fedora27/
 ./fedora27.sh # ERRO[0015] failed to wait for server 8052f315-5cc1-4619-93fe-d5b5e6126782: unexpected end of JSON input
 ```
 
-# Manually create the image from the volume that was created in the previous step
+# If the previous step failed then manually create the image from the volume that was created
 Click the "Create image" button on the Images page of Scaleway's control panel.
 
-# Launch a new instance with the image created in the previous step and then complete the setup
+# Launch a new instance with the new image
 ```
 cd /etc/ssh && mv *key* /tmp && systemctl restart scw-generate-ssh-keys.service && systemctl daemon-reload && systemctl reload sshd.service # regenerate keys
 dnf groupinstall "Fedora Server Edition"
