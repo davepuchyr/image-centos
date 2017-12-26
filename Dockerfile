@@ -33,6 +33,8 @@ vim-enhanced ; \
 # Patch rootfs
 COPY ./overlay-image-tools ./overlay /
 
+RUN passwd -d root
+
 # Enable Scaleway services
 RUN systemctl enable \
 	scw-generate-ssh-keys \

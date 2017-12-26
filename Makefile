@@ -1,5 +1,5 @@
 NAME =			fedora
-VERSION =		dangerous
+VERSION =		dirty-shutdown
 VERSION_ALIASES =	27
 TITLE =			Fedora 27
 DESCRIPTION =		Fedora 27
@@ -8,7 +8,7 @@ VENDOR_URL =		https://www.getfedora.com/
 DEFAULT_IMAGE_ARCH =	x86_64
 
 
-IMAGE_VOLUME_SIZE =	50G
+IMAGE_VOLUME_SIZE =	8G
 IMAGE_BOOTSCRIPT =	mainline 4.14.5 rev1
 IMAGE_NAME =		Fedora 27
 
